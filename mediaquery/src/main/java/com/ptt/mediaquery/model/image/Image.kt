@@ -11,4 +11,5 @@ class Image {
      * */
     var title: String? = null
     var size: Long = -1
+    var albumID: Int = -1
 }
