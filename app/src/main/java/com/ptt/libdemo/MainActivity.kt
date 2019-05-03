@@ -1,18 +1,27 @@
 package com.ptt.libdemo
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.ptt.mediaquery.ImageQuery
+import android.support.v7.app.AppCompatActivity
+import com.ptt.mediaquery.ImageModule
+import com.ptt.mediaquery.repositories.image.ImageRepository
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var imageRepository: ImageRepository
+
+    lateinit var mediaComponent: MediaComponent
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
 
-    override fun onResumeFragments() {
-        super.onResumeFragments()
-        ImageQuery(applicationContext).queryAllImages()
+        mediaComponent = DaggerMediaComponent.builder().imageModule(
+            ImageModule(
+                applicationContext
+            )
+        ).build()
+        mediaComponent.inject(this)
+        imageRepository.queryAllImages()
     }
 }
