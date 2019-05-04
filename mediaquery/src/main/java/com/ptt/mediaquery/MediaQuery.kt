@@ -30,7 +30,7 @@ class MediaQuery private constructor(context: WeakReference<Context>) {
 
         @JvmStatic
         fun init(context: Context): MediaQuery {
-            Companion.context = WeakReference(context)
+            this.context = WeakReference(context)
             return Holder.INSTANCE
         }
 
