@@ -14,19 +14,16 @@ class MediaQuery private constructor(context: WeakReference<Context>) {
 
     init {
         DaggerMediaQueryComponent.builder().imageModule(context.get()?.let {
-            ImageModule(
-                it
-            )
+            ImageModule(it)
         }).build().inject(this)
     }
 
     private object Holder {
-        val INSTANCE =
-            MediaQuery(context)
+        val INSTANCE = MediaQuery(context)
     }
 
     companion object {
-        lateinit var context: WeakReference<Context>
+        private lateinit var context: WeakReference<Context>
 
         @JvmStatic
         fun init(context: Context): MediaQuery {
