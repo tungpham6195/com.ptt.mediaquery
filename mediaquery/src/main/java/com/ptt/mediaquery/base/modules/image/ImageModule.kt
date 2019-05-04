@@ -1,4 +1,4 @@
-package com.ptt.mediaquery
+package com.ptt.mediaquery.base.modules.image
 
 import android.content.Context
 import com.ptt.mediaquery.repositories.image.ImageRepoImpl
