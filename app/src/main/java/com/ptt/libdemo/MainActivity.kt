@@ -22,6 +22,6 @@ class MainActivity : AppCompatActivity() {
             )
         ).build()
         mediaComponent.inject(this)
-        imageRepository.queryAllImages()
+        imageRepository.queryAlbum()
     }
 }
