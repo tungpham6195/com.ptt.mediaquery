@@ -142,7 +142,10 @@ class ImageRepoImpl(context: Context) : ImageRepository {
         return albums
     }
 
-    /**lấy data từ cursor*/
+    /**todo lấy data từ cursor
+     * @param cursor
+     * @return [Image]
+     * */
     private fun getImageDataFromCursor(cursor: Cursor): Image {
         val id = cursor.getInt(cursor.getColumnIndex(MediaStore.Images.Media._ID))
         val path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA))
@@ -154,7 +157,15 @@ class ImageRepoImpl(context: Context) : ImageRepository {
 
     }
 
-    /** set info của hình lấy đc từ device vào object [Image]*/
+    /** todo set info của hình lấy đc từ device vào object [Image]
+     * @param imageId id của hình
+     * @param imagePath path của file hình
+     * @param imageTitle tên file hình (có chứa extension)
+     * @param displayName tên file hình
+     * @param imageSize kích thước hình, tính theo byte
+     * @param dateAdded ngày thêm hình
+     * @return [Image]
+     * */
     private fun wrapImageInfo(
         imageId: Int, imagePath: String, imageTitle: String,
         displayName: String, imageSize: Long, dateAdded: Long
