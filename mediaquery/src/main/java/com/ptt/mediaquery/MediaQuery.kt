@@ -41,7 +41,7 @@ class MediaQuery private constructor(context: WeakReference<Context>) {
         }
 
         /**
-         * dùng để lấy get của [MediaQuery] khi muốn sử dụng các repository
+         * todo dùng để lấy get của [MediaQuery] khi muốn sử dụng các repository
          * @return [MediaQuery]
          * */
         @JvmStatic
