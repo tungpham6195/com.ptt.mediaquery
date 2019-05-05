@@ -2,6 +2,7 @@ package com.ptt.mediaquery
 
 import android.app.Application
 import android.content.Context
+import com.ptt.mediaquery.base.DaggerMediaQueryComponent
 import com.ptt.mediaquery.base.modules.image.ImageModule
 import com.ptt.mediaquery.repositories.image.ImageRepository
 import java.lang.ref.WeakReference
