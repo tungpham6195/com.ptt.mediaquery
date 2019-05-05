@@ -160,8 +160,8 @@ class ImageRepoImpl(context: Context) : ImageRepository {
     /** todo set info của hình lấy đc từ device vào object [Image]
      * @param imageId id của hình
      * @param imagePath path của file hình
-     * @param imageTitle tên file hình (có chứa extension)
-     * @param displayName tên file hình
+     * @param imageTitle tên file hình
+     * @param displayName tên file hình (có chứa extension)
      * @param imageSize kích thước hình, tính theo byte
      * @param dateAdded ngày thêm hình
      * @return [Image]
