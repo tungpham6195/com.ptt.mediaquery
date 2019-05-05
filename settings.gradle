@@ -1,1 +1,1 @@
-include ':app', ':mediaquery'
+include ':app', ':media_query'
